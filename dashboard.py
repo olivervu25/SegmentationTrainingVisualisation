@@ -1,20 +1,31 @@
 import streamlit as st
+import time
 
-# Your imports and utility functions here...
+def simulate_training(progress_bar, total_epochs=30):
+    for epoch in range(total_epochs):
+        time.sleep(1)  # Simulate some time delay for each epoch
+        progress_bar.progress((epoch + 1) / total_epochs)  # Update the progress
+        status_text.markdown(f"Epoch: <span style='color:red'>{epoch + 1}</span>", unsafe_allow_html=True)
 
-def simulate_training():
-    # Your code to simulate training over epochs
-    # Including updating plots and other visual elements
-    pass
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-top: 1rem;
+                    padding-bottom: 0rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
-st.title('Model Training Visualization')
+st.title('Image Segmentation Model: Training Progress')
 
-if st.button('Start Training'):
-    simulate_training()
+# Create columns for button and progress bar
+col1, col2 = st.columns([2, 8])  # Adjust the numbers to modify the relative width of the columns
 
-    # Display your plots, metrics, etc.
-    # For instance:
-    # fig1, fig2, ... = generate_your_plots()
-    # st.pyplot(fig1)
-    # st.pyplot(fig2)
-    # ... and so on
+# Place the button in the first column
+if col1.button('Start Training'):
+    # Add a label and place the progress bar in the second column
+    status_text = col2.empty()  # Placeholder for the text
+    progress_bar = col2.progress(0)
+    simulate_training(progress_bar)
