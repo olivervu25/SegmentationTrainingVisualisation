@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 
-all_data = pd.read_csv("/Users/olivervu25/Documents/QUT/MXB362/data.csv")
+all_data = pd.read_csv("/Users/olivervu25/Documents/QUT/MXB362/project/data.csv")
 
 # Setting up the plot
 # fig, ax = plt.subplots(figsize=(10, 6))
@@ -36,15 +36,13 @@ all_data = pd.read_csv("/Users/olivervu25/Documents/QUT/MXB362/data.csv")
 
 # plt.show()
 
-
-# Function to create an initial plot
 def create_initial_plot():
-    fig, ax = plt.subplots(figsize=(10, 6))
-    ax.set_xlim(1, 30)  # Assuming you have 30 epochs
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.set_xlim(1, 30)
     ax.set_ylim(min(all_data['Segmentation Accuracy']) - 0.01, max(all_data['Segmentation Accuracy']) + 0.01)
     ax.set_xlabel('Epoch')
     ax.set_ylabel('Segmentation Accuracy')
-    
+    ax.set_title('Test accuracy', fontsize=20)
     line, = ax.plot([], [], lw=2)
     return fig, ax, line
 
