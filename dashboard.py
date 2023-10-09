@@ -121,15 +121,6 @@ if top_col2.button('Start Training'):
     # Once the training is completed
     global_state.training_complete = True
     status_text.markdown("<span style='color:green'>Training Completed!</span>", unsafe_allow_html=True)
-    # # Add custom style to change the progress bar to red
-    # st.markdown("""
-    #     <style>
-    #         .stProgress > div > div {
-    #             background-color: red !important;
-    #         }
-    #     </style>
-    #     """, unsafe_allow_html=True)
-
 
 # After the training is completed, try changing to the red styling
 st.markdown("""

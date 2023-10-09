@@ -69,11 +69,6 @@ def frame_return():
     # Binary mask with threshold > 0.5
     binary_mask_threshold = (predicted_mask_np > 0.5).astype(np.uint8)
 
-    import matplotlib.pyplot as plt
-
-    # Assuming your original image is named 'original_image'
-
-
     # Resize the image to 128x128
     resized_image = tf.image.resize(image, [512, 512])
     resized_image = resized_image.numpy().astype(int)
