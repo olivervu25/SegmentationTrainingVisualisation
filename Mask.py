@@ -47,7 +47,6 @@ def frame_return():
     # Preprocess the image
     preprocessed_image = preprocess_image_only(image, image_size=128)
 
-
     # 1. Add a batch dimension
     test_image_batch = tf.expand_dims(preprocessed_image, axis=0)
 
@@ -81,15 +80,17 @@ def frame_return():
 
     # Setting up the figure for animation
     fig, ax = plt.subplots(1, 2, figsize=(12, 6))
+    fig.suptitle("Segmentation Performance: Original Image vs Predicted Mask", fontsize=15, weight='bold', y=0.98)
 
     # Display the image (this remains static throughout the animation)
     ax[0].imshow(resized_image)
-    ax[0].set_title("Original Image")
+    ax[0].set_title('Original Image', fontsize=12)
     ax[0].axis('off')
+
 
     # Initial mask display (this will get updated during the animation)
     ax[1].imshow(np.zeros_like(binary_mask_threshold), cmap='viridis')
-    ax[1].set_title("Predicted Mask")
+    ax[1].set_title('Predicted Mask', fontsize=12, weight='bold')
     ax[1].axis('off')
 
     #
@@ -105,7 +106,7 @@ def frame_return():
         
         # Update the mask display to the newly predicted mask
         ax[1].imshow(binary_mask_threshold, cmap='viridis')
-        ax[1].set_title(f"Predicted Mask (Epoch: {epoch})")
+        ax[1].set_title(f"Predicted Mask (Epoch: {epoch})",fontsize=12)
 
     # Create the animation
     ani = FuncAnimation(fig, update, frames=np.arange(1, 31), blit=False, repeat=False)  # 'repeat' set to False to run the animation only once
@@ -123,6 +124,6 @@ def frame_return():
         buf.close()
 
 
-    save_frames(frames, "/Users/olivervu25/Documents/QUT/MXB362/project/frames.pkl")  # Save frames to frames.pkl
+    save_frames(frames, "/Users/olivervu25/Documents/QUT/MXB362/project/frames2.pkl")  # Save frames to frames.pkl
 
     return frames 
