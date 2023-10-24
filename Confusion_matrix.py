@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import pandas as pd
 
-all_data = pd.read_csv("/Users/olivervu25/Documents/QUT/MXB362/project/data.csv")
+all_data = pd.read_csv("data.csv")
 
 # # Set up the figure, the axis, and the plot elements
 # fig, ax = plt.subplots(figsize=(6, 6))

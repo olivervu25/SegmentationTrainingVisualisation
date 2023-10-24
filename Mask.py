@@ -8,7 +8,7 @@ import tensorflow as tf
 import pickle
 
 # Load the image
-image_path = "/Users/olivervu25/Documents/QUT/MXB362/British_Shorthair_123.jpg"
+image_path = "British_Shorthair_123.jpg"
 image_string = tf.io.read_file(image_path)
 image = tf.image.decode_jpeg(image_string, channels=3)
 
@@ -119,6 +119,6 @@ def frame_return():
         buf.close()
 
 
-    save_frames(frames, "/Users/olivervu25/Documents/QUT/MXB362/project/frames2.pkl")  # Save frames to frames.pkl
+    save_frames(frames, "frames2.pkl")  # Save frames to frames.pkl
 
     return frames 

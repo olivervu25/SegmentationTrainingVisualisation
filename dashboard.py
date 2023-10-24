@@ -8,7 +8,7 @@ from Confusion_matrix import create_initial_confusion_matrix, update_confusion_m
 from Mask import frame_return, load_frames
 import os
 
-all_data = pd.read_csv("/Users/olivervu25/Documents/QUT/MXB362/project/data.csv")
+all_data = pd.read_csv("data.csv")
 
 # Global state for the training status
 
@@ -18,8 +18,8 @@ class GlobalState:
 
 global_state = GlobalState()
 
-if os.path.exists("/Users/olivervu25/Documents/QUT/MXB362/project/frames2.pkl"):
-    frames = load_frames("/Users/olivervu25/Documents/QUT/MXB362/project/frames2.pkl")
+if os.path.exists("frames2.pkl"):
+    frames = load_frames("frames2.pkl")
 else:
     frames = frame_return()  # This will generate and save frames to frames.pkl
     
