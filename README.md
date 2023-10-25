@@ -11,7 +11,7 @@ The visualisation is live and can be accessed at:
 
 **Note**: For the best viewing experience, set the display to **Wide mode** and choose the **Light theme** to match the original version.
 
-<img width="300" alt="image" src="https://github.com/olivervu25/SegmentationTrainingVisualisation/assets/56999718/6da4617e-f825-4f74-a2ab-10b5ac5594f6">
+<img width="250" alt="image" src="https://github.com/olivervu25/SegmentationTrainingVisualisation/assets/56999718/0af66886-c472-4a31-bb32-3e1ebec3830a">
 
 ## 🌟 Features
 
