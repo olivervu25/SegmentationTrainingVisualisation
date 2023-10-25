@@ -4,12 +4,6 @@ Welcome to the **Image Segmentation Model Visualization** repository. This repos
 
 <img width="1426" alt="image" src="https://github.com/olivervu25/SegmentationTrainingVisualisation/assets/56999718/2595c0b5-e970-44e4-adab-c0027bccb5ee">
 
-## 🌟 Features
-
-- **Interactive Progress**: Monitor the progress of model training with an intuitive progress bar.
-- **Dynamic Visualization**: View the accuracy and other metrics of the model over epochs, with visual indicators for significant moments.
-- **Integrated with Streamlit**: Easily run and view the visualization with Streamlit's user-friendly interface.
-
 ## 🔗 Link
 
 The visualisation is live and can be accessed at:
@@ -17,7 +11,13 @@ The visualisation is live and can be accessed at:
 
 **Note**: For the best viewing experience, set the display to **Wide mode** and choose the **Light theme** to match the original version.
 
-<img width="529" alt="image" src="https://github.com/olivervu25/SegmentationTrainingVisualisation/assets/56999718/6da4617e-f825-4f74-a2ab-10b5ac5594f6">
+<img width="300" alt="image" src="https://github.com/olivervu25/SegmentationTrainingVisualisation/assets/56999718/6da4617e-f825-4f74-a2ab-10b5ac5594f6">
+
+## 🌟 Features
+
+- **Interactive Progress**: Monitor the progress of model training with an intuitive progress bar.
+- **Dynamic Visualization**: View the accuracy and other metrics of the model over epochs, with visual indicators for significant moments.
+- **Integrated with Streamlit**: Easily run and view the visualization with Streamlit's user-friendly interface.
 
 ## 🎓 Developed by
 
