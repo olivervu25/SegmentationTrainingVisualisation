@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 
 
-all_data = pd.read_csv("/Users/olivervu25/Documents/QUT/MXB362/project/data.csv")
+all_data = pd.read_csv("data.csv")
 
 
 def create_initial_plot():
