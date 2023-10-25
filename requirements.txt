@@ -2,8 +2,6 @@ numpy
 matplotlib
 tensorflow
 imageio
-io
 pickle
 streamlit
-os
 pandas
