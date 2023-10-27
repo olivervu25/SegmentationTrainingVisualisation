@@ -3,8 +3,28 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import pandas as pd
 
-#This file is to create confusion matrix
+"""
+Confusion Matrix Visualization for Model Performance Evaluation
 
+This script provides functions to visualize and update the confusion matrix of an image 
+segmentation model's performance using Matplotlib.
+
+Primary Functions:
+- `create_initial_confusion_matrix()`: 
+    - Initializes a 2x2 confusion matrix plot.
+    - The matrix values are initialized to zero.
+    - Configures visual elements such as color mapping, labels, and title.
+    - Returns the figure, axis, color axis, and text elements for updating.
+
+- `update_confusion_matrix(ax, cax, texts, epoch)`: 
+    - Uses the epoch number to fetch the corresponding confusion matrix values from 'all_data'.
+    - Updates the matrix's color and text elements to reflect new values.
+    - Returns the updated axis and color axis.
+
+Note: The source of the matrix values is the 'data.csv' file, which should contain columns for 
+True Positives, False Positives, False Negatives, and True Negatives for each epoch.
+
+"""
 all_data = pd.read_csv("data.csv")
 
 #Function to create initial confusion matrix 

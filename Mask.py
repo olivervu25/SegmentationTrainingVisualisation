@@ -8,7 +8,26 @@ import io
 import tensorflow as tf
 import pickle
 
-#This code is to create the predicted mask and save the output
+"""
+Image Segmentation Model Visualization with TensorFlow and Matplotlib
+
+This script processes and visualizes the performance of an image segmentation model 
+on a given image using TensorFlow and Matplotlib.
+
+Key Functionalities:
+- `save_frames()`: Serialize and save frames as a `.pkl` file.
+- `load_frames()`: Load frames from a serialized `.pkl` file.
+- `preprocess_image_only()`: Resize and preprocess the image.
+- `mobilenet_preprocess_image()`: Scale images to [-1, 1], tailored for MobileNetV3.
+- `frame_return()`: 
+    1. Loads and preprocesses the target image.
+    2. For each epoch, it predicts a mask using a specific model.
+    3. Visualizes the original image and the predicted mask side by side.
+    4. Collects frames showcasing the progression of the mask prediction across epochs.
+    5. Saves the frames for further use.
+
+"""
+
 # Load the image
 image_path = "British_Shorthair_123.jpg"
 image_string = tf.io.read_file(image_path)

@@ -4,6 +4,26 @@ from matplotlib.animation import FuncAnimation
 import pandas as pd 
 import streamlit as st
 
+"""
+Test Accuracy Visualization for Model Training
+
+This script provides functions to visualize the test accuracy of an image segmentation model across epochs using Matplotlib. Additionally, it supports dynamic updates for visualization during the model's training process.
+
+Primary Functions:
+- `create_initial_plot()`: 
+    - Initializes a line plot to depict the model's test accuracy over epochs.
+    - Configures visual elements such as axis limits, labels, and title.
+    - Returns the figure, axis, and line object, preparing it for updates.
+
+- `update_plot(ax, line, current_epoch)`: 
+    - Accepts the current epoch number to determine the segment of the data to display.
+    - Fetches the accuracy values up to the current epoch from 'all_data' and updates the plot.
+    - Returns the updated axis and line object.
+
+Note: The source of the accuracy values is the 'data.csv' file, which should contain columns for Epoch and Segmentation Accuracy.
+
+"""
+
 
 all_data = pd.read_csv("data.csv")
 
