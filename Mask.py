@@ -1,3 +1,4 @@
+#Load libraries
 import numpy as np
 import matplotlib.pyplot as plt
 import tensorflow as tf
@@ -7,6 +8,7 @@ import io
 import tensorflow as tf
 import pickle
 
+#This code is to create the predicted mask and save the output
 # Load the image
 image_path = "British_Shorthair_123.jpg"
 image_string = tf.io.read_file(image_path)
@@ -105,8 +107,6 @@ def frame_return():
 
     # Create the animation
     ani = FuncAnimation(fig, update, frames=np.arange(1, 31), blit=False, repeat=False)  # 'repeat' set to False to run the animation only once
-
-    #plt.show()
 
     frames = []
     # Loop through each epoch and save the frame
