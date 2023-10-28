@@ -8,19 +8,16 @@ from Confusion_matrix import create_initial_confusion_matrix, update_confusion_m
 from Mask import frame_return, load_frames
 import os
 
-"""
-Streamlit Visualization for Image Segmentation Model Training
+#Streamlit Visualization for Image Segmentation Model Training
 
-This Streamlit script visualizes the training progress of a MobileNetV3Small model on the Oxford Pets dataset. 
+#This Streamlit script visualizes the training progress of a MobileNetV3Small model on the Oxford Pets dataset. 
 
-Main Features:
-- `simulate_training()`: Drives the core visualization loop, updating plots, confusion matrix, and GIF frames.
-- Uses custom `GlobalState` class to keep track of training state and allows restarting the training process.
-- Loads training frames either from a cached `.pkl` file or generates them using the `frame_return()` function.
-- Dynamic updates to visuals with every epoch, including progress bar, training metrics plot, and confusion matrix.
-- Special visual cues post the 20th epoch, indicating the unfreezing of the MobileNetV3Small model.
-
-"""
+#Main Features:
+#- `simulate_training()`: Drives the core visualization loop, updating plots, confusion matrix, and GIF frames.
+#- Uses custom `GlobalState` class to keep track of training state and allows restarting the training process.
+#- Loads training frames either from a cached `.pkl` file or generates them using the `frame_return()` function.
+#- Dynamic updates to visuals with every epoch, including progress bar, training metrics plot, and confusion matrix.
+#- Special visual cues post the 20th epoch, indicating the unfreezing of the MobileNetV3Small model.
 
 
 all_data = pd.read_csv("data.csv")
